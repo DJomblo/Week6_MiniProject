@@ -7,11 +7,12 @@ data class RecipeModel(
     val description: String,           // description of the recipe
     val imageUrl: String,              // URL for recipe image
     val ingredients: List<String>,     // Ingredients list
-    val recipeDetails: String          // Details/instructions for the recipe
+    val recipeDetails: String,          // Details/instructions for the recipe
+    var isFavorite: Boolean = false     //  favorite state
 )
 
 
-// Enumeration for cuisine types to categorize recipes
+// cuisine type
 enum class CuisineType {
     American, Italian, Japanese, Mexican, Chinese, Indian, Indonesian
 }

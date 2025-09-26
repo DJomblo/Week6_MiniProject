@@ -6,7 +6,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.week6_miniproject.R
 
-// Implementation of ImageLoader using Glide for image loading
+// ImageLoader using Glide
 class GlideImageLoader(private val context: Context) : ImageLoader {
     override fun loadImage(imageUrl: String, imageView: ImageView) {
         Glide.with(context)
