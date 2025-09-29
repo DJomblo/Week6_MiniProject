@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.week6_miniproject.model.RecipeModel
 
-// Adapter for RecyclerView with support for favorites
+// adapter for RecyclerView with support for favorites
 class RecipeAdapter(
     private val inflater: LayoutInflater,
     private val imageLoader: ImageLoader,
@@ -25,7 +25,7 @@ class RecipeAdapter(
 
     interface OnClickListener {
         fun onItemClick(recipe: RecipeModel)
-        fun onFavoriteClick(recipe: RecipeModel) // <-- NEW
+        fun onFavoriteClick(recipe: RecipeModel)
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

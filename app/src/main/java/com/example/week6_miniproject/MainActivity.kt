@@ -1,6 +1,10 @@
 package com.example.week6_miniproject
 
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,6 +36,8 @@ class MainActivity : AppCompatActivity() {
             }
         )
     }
+
+
 
     // Keep all recipes in memory
     private lateinit var allRecipes: List<RecipeModel>
@@ -300,7 +306,7 @@ class MainActivity : AppCompatActivity() {
 
         )
 
-        // Show all recipes
+        // Show recipe
         recipeAdapter.setData(allRecipes)
 
         // Bottom navbarnya
@@ -332,7 +338,7 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    // Toggle favorite state and refresh the UI
+    // toggle favorite state and refresh the UI
     private fun toggleFavorite(recipe: RecipeModel) {
         if (favoriteRecipes.contains(recipe)) {
             favoriteRecipes.remove(recipe)
